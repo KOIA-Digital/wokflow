@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'satoshi';
+  src: url('/fonts/Satoshi-Variable.ttf'); 
+ }
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 44, 15, 15;
+  --background-end-rgb: 44, 15, 15;
+}
+
+
+.gradient-bg {
+  background: rgb(105,30,30);
+  background: radial-gradient(circle at top, rgba(153,27,27,1) 0%, rgba(105,30,30,1) 100%);
+}
+.gradient-solana {
+  background: rgb(20,241,149);
+  background: linear-gradient(45deg, rgb(14, 164, 102) 0%, rgb(112, 51, 186) 100%);}
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  font-family: 'satoshi' !important;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.wallet-adapter-button-trigger {
+  background-color: #ef4444 !important;
+}
+.wallet-adapter-button {
+  height: auto !important;
+  line-height: 1.25rem !important;
+  
+  font-size: 14px !important;
+  padding: 8px 16px !important;
+  gap: 0.5rem !important;
+}
+
+.wallet-adapter-button-end-icon, .wallet-adapter-button-start-icon, .wallet-adapter-button-end-icon img, .wallet-adapter-button-start-icon img{
+  height: 14px !important;
+  width: 14px !important;
+  margin: 0 !important;
+}
+.wallet-adapter-button-trigger:hover {
+  background-color: #c53737 !important;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+@media only screen and (min-width: 1024px) {
+  .wallet-adapter-button {
+    line-height: 1.5rem !important;
+    
+    font-size: 16px !important;
+    padding: 8px 16px !important;
+    gap: 0.5rem !important;
+  }
+  .wallet-adapter-button-end-icon, .wallet-adapter-button-start-icon, .wallet-adapter-button-end-icon img, .wallet-adapter-button-start-icon img{
+    height: 20px !important;
+    width: 20px !important;
+  }
+}
