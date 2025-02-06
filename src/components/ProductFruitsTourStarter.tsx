@@ -18,16 +18,16 @@ import { PublicKey, none, publicKey, sol, some } from "@metaplex-foundation/umi"
 import { SendAndConfirm } from "@/helpers/sendAndConfirm";
 import { usePriorityFee } from "./PriorityFees/priorityFeeService";
 import SuccessToast from "./Toast/successToast";
+import { useRouter } from "next/navigation";
 
 export default function ProductFruitsTourStarter({ tourId }: { tourId: number }) {
     const wallet = useWallet()
     const { connection } = useConnection()
-    const [startTour, setStartTour] = useState(false)
     const [tokens, setTokens] = useState<BuiltToken[]>([])
     const [isRevokingMint, setIsRevokingMint] = useState(false);
     const [isRevokingFreeze, setIsRevokingFreeze] = useState(false);
     const [isRevokingUpdate, setIsRevokingUpdate] = useState(false);
-
+    const navigate = useRouter()
 
     const { priority } = usePriorityFee()
 
@@ -212,7 +212,7 @@ export default function ProductFruitsTourStarter({ tourId }: { tourId: number })
                             What are you waiting for?<br /> Press the button below and let&apos;s start cooking
                         </div>
                         <div className="flex gap-2">
-                            <Button icon={<GiWok size={20} />} variant="white" onClick={() => setStartTour(true)} title="Start cooking"></Button>
+                            <Button icon={<GiWok size={20} />} variant="white" onClick={() => navigate.push('token')} title="Start cooking"></Button>
                         </div>
                     </>
                     :
