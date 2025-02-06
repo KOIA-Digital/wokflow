@@ -55,7 +55,7 @@
 - **Development Mode:**
 
   ```bash
-  yarn dev
+  yarn run dev
   ```
 
 - **Production Build:**
