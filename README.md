@@ -1,6 +1,6 @@
 # WokFlow
 
-[WokFlow](https://wokflow.xyz) is an open source platform for creating and managing Solana assets—ranging from tokens to NFTs. It leverages decentralized storage via Pinata and connects to Solana through Helius RPC (or your chosen provider).
+[WokFlow](https://wokflow-iota.vercel.app) is an open source platform for creating and managing Solana assets—ranging from tokens to NFTs. It leverages decentralized storage via Pinata and connects to Solana through Helius RPC (or your chosen provider).
 
 ---
 
