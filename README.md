@@ -7,7 +7,7 @@
 ## Features
 
 - **Solana Asset Management:** Create and manage tokens and NFTs.
-- **Decentralized Storage:** Integrates with Pinata for file storage.
+- **Decentralized Storage:** Integrates with Pinata for file storage (image, metadata).
 - **Flexible RPC Integration:** Supports Helius RPC and other providers.
 
 ---
@@ -17,7 +17,7 @@
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/wokflow.git
+   git clone https://github.com/KOIA-Digital/wokflow.git
    cd wokflow
    ```
 
