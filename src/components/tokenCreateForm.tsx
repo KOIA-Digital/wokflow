@@ -7,7 +7,6 @@ import Button from "./button";
 import { useConnection, useWallet } from "@solana/wallet-adapter-react";
 import { WalletMultiButton } from "./myWalletMultiButton/WalletMultiButton"
 import FileUpload from "./fileUpload";
-import { NFTStorage, Blob } from 'nft.storage'
 import { createUmi } from "@metaplex-foundation/umi-bundle-defaults";
 import { generateSigner, none, percentAmount, publicKey, sol } from "@metaplex-foundation/umi";
 import { mplCandyMachine } from "@metaplex-foundation/mpl-candy-machine";
@@ -72,10 +71,6 @@ export default function TokenCreateForm() {
         // free memory when ever this component is unmounted
         return () => URL.revokeObjectURL(objectUrl)
     }, [file])
-
-
-    const NFT_STORAGE_TOKEN = process.env.NEXT_PUBLIC_NFTSTORAGE_KEY ?? ""
-    const client = new NFTStorage({ token: NFT_STORAGE_TOKEN })
 
     const onData = (file: File | undefined) => {
         setFile(file)
