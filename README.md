@@ -70,6 +70,10 @@
 ## Contributing
 
 Contributions are welcome! Please fork the repository, create a new branch for your changes, and submit a pull request.
+If you wish to support the project financially please send your contributions to this wallet address:
+```bash
+GsZ6qAWBVch4Q4CCnFDC1Lq3qQ6qQm4pw3y4HTpJxtT1
+```
 
 ---
 
